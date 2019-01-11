@@ -1,12 +1,19 @@
-package com.wanz.Product;
+package com.wanz.product;
 
-import com.wanz.Product.model.*;
+import com.wanz.product.model.*;
+import com.wanz.product.validator.CreateProductRequestValidator;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ProductController {
+
+    private CreateProductRequestValidator createProductRequestValidator;
+
+    public ProductController(CreateProductRequestValidator createProductRequestValidator) {
+        this.createProductRequestValidator = createProductRequestValidator;
+    }
 
     /*
      * Get product
@@ -30,6 +37,7 @@ public class ProductController {
     @PostMapping("/products")
     ResponseEntity<CreateProductResponse> createProduct(@RequestBody CreateProductRequest createProductRequest) {
         //实现
+        boolean validate = createProductRequestValidator.validate(createProductRequest);
         return new ResponseEntity<>(new CreateProductResponse(), HttpStatus.CREATED);
     }
 

@@ -1,4 +1,4 @@
-package com.wanz.Order.model;
+package com.wanz.order.model;
 
 import java.util.List;
 

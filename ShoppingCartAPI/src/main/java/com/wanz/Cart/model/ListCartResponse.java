@@ -1,4 +1,4 @@
-package com.wanz.Cart.model;
+package com.wanz.cart.model;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.wanz.Cart.model;
+package com.wanz.cart.model;
 
-import com.wanz.Product.model.Product;
+import com.wanz.product.model.Product;
 
 public class UpdateCartRequest {
     private String name;

@@ -1,4 +1,4 @@
-package com.wanz.Product.model;
+package com.wanz.product.model;
 
 public class UpdateProductRequest {
     private String name;

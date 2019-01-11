@@ -1,6 +1,6 @@
-package com.wanz.Order.model;
+package com.wanz.order.model;
 
-import com.wanz.Cart.model.Cart;
+import com.wanz.cart.model.Cart;
 
 public class Order {
     private String id;
@@ -10,7 +10,6 @@ public class Order {
         this.id = id;
         this.cart = cart;
     }
-
 
     public String getId() {
         return id;

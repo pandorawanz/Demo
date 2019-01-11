@@ -1,6 +1,6 @@
-package com.wanz.Cart;
+package com.wanz.cart;
 
-import com.wanz.Cart.model.*;
+import com.wanz.cart.model.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

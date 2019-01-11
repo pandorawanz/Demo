@@ -1,6 +1,6 @@
-package com.wanz.Order.model;
+package com.wanz.order.model;
 
-import com.wanz.Cart.model.Cart;
+import com.wanz.cart.model.Cart;
 
 public class CreateOrderRequest {
     private String id;

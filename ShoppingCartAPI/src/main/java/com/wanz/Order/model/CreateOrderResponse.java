@@ -1,4 +1,4 @@
-package com.wanz.Order.model;
+package com.wanz.order.model;
 
 public class CreateOrderResponse {
     private Order order;

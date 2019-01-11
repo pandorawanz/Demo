@@ -1,4 +1,4 @@
-package com.wanz.Cart.model;
+package com.wanz.cart.model;
 
 public class CreateCartResponse {
     private Cart cart;
