@@ -1,6 +1,6 @@
 package com.wanz.product.validator;
 
-import com.wanz.product.model.CreateProductRequest;
+import com.wanz.product.model.api.CreateProductRequest;
 import org.springframework.stereotype.Component;
 
 @Component
