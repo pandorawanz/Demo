@@ -1,13 +1,11 @@
 package com.wanz.product.model.api;
 
 public class CreateProductRequest {
-    private int id;
     private String name;
     private String description;
     private double price;
 
-    public CreateProductRequest(int id, String name, String desctiption, double price) {
-        this.id = id;
+    public CreateProductRequest(String name, String desctiption, double price) {
         this.name = name;
         this.description = desctiption;
         this.price = price;
@@ -37,11 +35,4 @@ public class CreateProductRequest {
         return name;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
 }

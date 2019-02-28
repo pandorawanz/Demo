@@ -2,7 +2,9 @@ package com.wanz.product.model;
 
 import com.wanz.product.model.api.CreateProductRequest;
 import com.wanz.product.model.api.UpdateProductRequest;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,8 +14,24 @@ import java.util.List;
 
 /*
     DAO -- Data access object
-    专门用来处理数据库读取
+    专门用来处理数据库读取,Product相关的数据访问的逻辑！
+
+    ORM会帮我实现这个接口，也就是实现其中的操作！（生成SQL访问语句，执行SQL语句，转换返回结果到JAVA对象）
  */
+@Repository
+public interface ProductDao extends CrudRepository<Product, Integer> {
+
+    // 根据ORM的命名惯例，声明操作方法
+    Product getById(int id);
+
+    List<Product> findAll();
+
+    Product save(Product product);
+
+}
+
+
+/*
 @Component
 public class ProductDao {
     private Statement statement;
@@ -133,3 +151,6 @@ public class ProductDao {
         }
     }
 }
+
+
+*/

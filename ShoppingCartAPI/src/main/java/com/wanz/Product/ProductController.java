@@ -27,47 +27,73 @@ public class ProductController {
      */
     @GetMapping("/products/{productId}")
     ResponseEntity<GetProductResponse> getProduct(@PathVariable int productId) {
-        // 执行数据处理方法
-        Product product = productDao.get(productId);
-        return new ResponseEntity<>(new GetProductResponse(product), HttpStatus.OK);
+        Product product = productDao.getById(productId);
+
+        if (product == null) {
+           return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } else {
+            return new ResponseEntity<>(new GetProductResponse(product), HttpStatus.OK);
+        }
     }
 
     /*
      * Get product list
      */
+
     @GetMapping("/products")
     ResponseEntity<ListProductResponse> listProduct() {
-        List<Product> listProduct = productDao.list();
-        return new ResponseEntity<>(new ListProductResponse(listProduct), HttpStatus.OK);
+        List<Product> productList = productDao.findAll();
+
+        if (productList == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } else {
+            return new ResponseEntity<>(new ListProductResponse(productList), HttpStatus.OK);
+        }
     }
 
     /*
      * Create product
      */
+
     @PostMapping("/products")
-    ResponseEntity<CreateProductResponse> createProduct(@RequestBody CreateProductRequest createProductRequest) {
-        //实现
+    public ResponseEntity<CreateProductResponse> createProduct(@RequestBody CreateProductRequest createProductRequest) {
+        // 实现
         boolean validate = createProductRequestValidator.validate(createProductRequest);
-        Product product = productDao.create(createProductRequest);
+
+        Product product = productDao.save(new Product(createProductRequest.getName(), createProductRequest.getDescription(), createProductRequest.getPrice()));
         return new ResponseEntity<>(new CreateProductResponse(product), HttpStatus.CREATED);
     }
 
     /*
      * Update product
      */
-    @PutMapping("/products/{productID}")
-    ResponseEntity<UpdateProductResponse> updateProduct(@PathVariable int productID, @RequestBody UpdateProductRequest updateProductRequest) {
-        Product product = productDao.update(productID, updateProductRequest);
+
+    @PutMapping("/products/{productId}")
+    public ResponseEntity<UpdateProductResponse> updateProduct(@PathVariable int productId, @RequestBody UpdateProductRequest updateProductRequest) {
+        Product product = productDao.getById(productId);
+
+        if (product == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        product.setName(updateProductRequest.getName());
+        product.setDescription(updateProductRequest.getDescription());
+        product.setPrice(updateProductRequest.getPrice());
+        product = productDao.save(product);
+
         return new ResponseEntity<>(new UpdateProductResponse(product), HttpStatus.OK);
     }
 
     /*
      * Delete product
      */
+
+    /*
     @DeleteMapping("/products/{productID}")
     ResponseEntity<Object> deleteProduct(@PathVariable int productID) {
         productDao.delete(productID);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+    */
 
 }

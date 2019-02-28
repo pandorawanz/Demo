@@ -11,7 +11,7 @@ public class UpdateProductRequest {
         this.price = price;
     }
 
-    public void setPrice(long price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
