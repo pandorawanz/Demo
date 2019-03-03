@@ -1,29 +1,60 @@
 package com.wanz.order.model;
 
-import com.wanz.cart.model.Cart;
+import com.wanz.cart.model.CartItem;
 
 public class CreateOrderRequest {
-    private String id;
-    private Cart cart;
 
-    public CreateOrderRequest(String id, Cart cart) {
-        this.id = id;
-        this.cart = cart;
+    private int userId;
+    private int productId;
+    private int quantity;
+    private String status;
+    private String address;
+
+    public CreateOrderRequest(int userId, int productId, int quantity, String status, String address) {
+        this.userId = userId;
+        this.productId = productId;
+        this.quantity = quantity;
+        this.status = status;
+        this.address = address;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setCart(Cart cart) {
-        this.cart = cart;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public Cart getCart() {
-        return cart;
+    public int getProductId() {
+        return productId;
     }
 
-    public String getId() {
-        return id;
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

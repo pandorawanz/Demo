@@ -26,7 +26,7 @@ public class ProductController {
      * Get product
      */
     @GetMapping("/products/{productId}")
-    ResponseEntity<GetProductResponse> getProduct(@PathVariable int productId) {
+    public ResponseEntity<GetProductResponse> getProduct(@PathVariable int productId) {
         Product product = productDao.getById(productId);
 
         if (product == null) {
@@ -41,7 +41,7 @@ public class ProductController {
      */
 
     @GetMapping("/products")
-    ResponseEntity<ListProductResponse> listProduct() {
+    public ResponseEntity<ListProductResponse> listProduct() {
         List<Product> productList = productDao.findAll();
 
         if (productList == null) {
@@ -79,7 +79,7 @@ public class ProductController {
         product.setName(updateProductRequest.getName());
         product.setDescription(updateProductRequest.getDescription());
         product.setPrice(updateProductRequest.getPrice());
-        product = productDao.save(product);
+        productDao.save(product);
 
         return new ResponseEntity<>(new UpdateProductResponse(product), HttpStatus.OK);
     }

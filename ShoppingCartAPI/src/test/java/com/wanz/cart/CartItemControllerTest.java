@@ -8,43 +8,46 @@ import org.springframework.http.ResponseEntity;
 
 import static org.junit.Assert.assertEquals;
 
-public class CartControllerTest {
+public class CartItemControllerTest {
+       /*
 
-    private CartController cartController = new CartController();
+    private CartItemController cartItemController = new CartItemController();
+
     private Product[] products;
 
     @Test
     public void shouldGetCartSuccessfully() {
-        ResponseEntity<GetCartResponse> response = cartController.getCart("123");
+        ResponseEntity<GetCartResponse> response = cartItemController.getCart("123");
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
     }
 
     @Test
     public void shouldListCartSuccessfully() {
-        ResponseEntity<ListCartResponse> response = cartController.listCart();
+        ResponseEntity<ListCartResponse> response = cartItemController.listCart();
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
     }
 
     @Test
     public void shouldCreateCartSuccessfully() {
-        ResponseEntity<CreateCartResponse> response = cartController.createCart(new CreateCartRequest("123", "default", products));
+        ResponseEntity<CreateCartResponse> response = cartItemController.createCart(new CreateCartRequest("123", "default", products));
 
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
     }
 
     @Test
     public void shouldUpdateCartSuccessfully() {
-        ResponseEntity<UpdateCartResponse> response = cartController.updateCart("123", new UpdateCartRequest("default", products));
+        ResponseEntity<UpdateCartResponse> response = cartItemController.updateCart("123", new UpdateCartRequest("default", products));
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
     }
 
     @Test
     public void shouldDeleteCartSuccessfully() {
-        ResponseEntity<Object> response = cartController.deleteCart("123");
+        ResponseEntity<Object> response = cartItemController.deleteCart("123");
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
     }
+    */
 }

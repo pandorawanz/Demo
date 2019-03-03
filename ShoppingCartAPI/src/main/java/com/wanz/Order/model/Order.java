@@ -1,29 +1,92 @@
 package com.wanz.order.model;
 
-import com.wanz.cart.model.Cart;
+import com.wanz.cart.model.CartItem;
+import com.wanz.product.model.Product;
+import com.wanz.user.User;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "order")
 public class Order {
-    private String id;
-    private Cart cart;
 
-    public Order(String id, Cart cart) {
-        this.id = id;
-        this.cart = cart;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id")
+    private Product product;
+
+    @Column(name = "quantity")
+    private long quantity;
+
+    @Column(name = "status")
+    private String status;
+
+    @Column(name = "address")
+    private String address;
+
+    public Order() {
     }
 
-    public String getId() {
+    public Order(User user, Product product, long quantity, String status, String address) {
+        this.user = user;
+        this.product = product;
+        this.quantity = quantity;
+        this.status = status;
+        this.address = address;
+    }
+
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public void setCart(Cart cart) {
-        this.cart = cart;
+    public User getUser() {
+        return user;
     }
 
-    public Cart getCart() {
-        return cart;
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public long getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(long quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

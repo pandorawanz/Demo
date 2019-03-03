@@ -1,19 +1,19 @@
 package com.wanz.cart.model;
 
 public class GetCartResponse {
-    private Cart cart;
+    private CartItem cartItem;
 
     public GetCartResponse() {}
 
-    public GetCartResponse(Cart cart) {
-        this.cart = cart;
+    public GetCartResponse(CartItem cartItem) {
+        this.cartItem = cartItem;
     }
 
-    public void setCart(Cart cart) {
-        this.cart = cart;
+    public void setCartItem(CartItem cartItem) {
+        this.cartItem = cartItem;
     }
 
-    public Cart getCart() {
-        return cart;
+    public CartItem getCartItem() {
+        return cartItem;
     }
 }

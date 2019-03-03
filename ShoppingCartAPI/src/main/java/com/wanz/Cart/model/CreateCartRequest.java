@@ -3,37 +3,37 @@ package com.wanz.cart.model;
 import com.wanz.product.model.Product;
 
 public class CreateCartRequest {
-    private String id;
-    private String name;
-    private Product[] products;
+    private int user_id;
+    private int product_id;
+    private int quantity;
 
-    public CreateCartRequest(String id, String name, Product[] products) {
-        this.id = id;
-        this.name = name;
-        this.products = products;
+    public CreateCartRequest(int user_id, int product_id, int quantity) {
+        this.user_id = user_id;
+        this.product_id = product_id;
+        this.quantity = quantity;
     }
 
-    public Product[] getProducts() {
-        return products;
+    public int getUser_id() {
+        return user_id;
     }
 
-    public String getName() {
-        return name;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
-    public String getId() {
-        return id;
+    public int getProduct_id() {
+        return product_id;
     }
 
-    public void setProducts(Product[] products) {
-        this.products = products;
+    public void setProduct_id(int product_id) {
+        this.product_id = product_id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

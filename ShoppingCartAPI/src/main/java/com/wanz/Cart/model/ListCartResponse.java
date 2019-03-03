@@ -3,19 +3,19 @@ package com.wanz.cart.model;
 import java.util.List;
 
 public class ListCartResponse {
-    private List<Cart> listCart;
+    private List<CartItem> listCartItem;
 
     public ListCartResponse() {}
 
-    public ListCartResponse(List<Cart> listCart) {
-        this.listCart = listCart;
+    public ListCartResponse(List<CartItem> listCartItem) {
+        this.listCartItem = listCartItem;
     }
 
-    public List<Cart> getListCart() {
-        return listCart;
+    public List<CartItem> getListCartItem() {
+        return listCartItem;
     }
 
-    public void setListCart(List<Cart> listCart) {
-        this.listCart = listCart;
+    public void setListCartItem(List<CartItem> listCartItem) {
+        this.listCartItem = listCartItem;
     }
 }
