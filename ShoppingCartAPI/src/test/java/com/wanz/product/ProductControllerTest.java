@@ -1,15 +1,6 @@
 package com.wanz.product;
 
-import com.wanz.product.model.ProductDao;
-import com.wanz.product.model.api.*;
-import com.wanz.product.validator.CreateProductRequestValidator;
-import org.junit.Test;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 
-import java.sql.Statement;
-
-import static org.junit.Assert.assertEquals;
 
 public class ProductControllerTest {
 

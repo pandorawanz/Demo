@@ -1,14 +1,5 @@
 package com.wanz.order;
 
-import com.wanz.cart.model.CartItem;
-import com.wanz.order.model.CreateOrderRequest;
-import com.wanz.order.model.CreateOrderResponse;
-import com.wanz.order.model.GetOrderResponse;
-import com.wanz.order.model.ListOrderResponse;
-import org.junit.Test;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-
 import static org.junit.Assert.assertEquals;
 
 public class OrderControllerTest {

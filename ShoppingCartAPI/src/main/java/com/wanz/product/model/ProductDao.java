@@ -1,15 +1,8 @@
 package com.wanz.product.model;
 
-import com.wanz.product.model.api.CreateProductRequest;
-import com.wanz.product.model.api.UpdateProductRequest;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
 
 /*

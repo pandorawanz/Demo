@@ -1,7 +1,7 @@
 package com.wanz.cart.model;
 
 import com.wanz.product.model.Product;
-import com.wanz.user.User;
+import com.wanz.user.model.User;
 
 import javax.persistence.*;
 
