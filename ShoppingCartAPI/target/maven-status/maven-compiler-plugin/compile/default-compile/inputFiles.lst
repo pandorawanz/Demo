@@ -1,8 +1,11 @@
+C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\Session\model\Session.java
 C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\cart\model\CartItemDao.java
 C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\cart\view\GetCartResponse.java
+C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\user\view\UserView.java
 C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\user\controller\UserController.java
 C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\product\view\UpdateProductRequest.java
 C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\product\model\ProductDao.java
+C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\Session\controller\SessionController.java
 C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\order\view\GetOrderResponse.java
 C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\product\model\Product.java
 C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\cart\view\ListCartResponse.java
@@ -35,5 +38,7 @@ C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\order\view\Up
 C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\user\model\User.java
 C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\user\view\ListUserResponse.java
 C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\cart\model\CartItem.java
+C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\Session\model\SessionManager.java
 C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\product\view\GetProductResponse.java
+C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\Session\view\LoginRequest.java
 C:\Users\linzi\IdeaProjects\ShoppingCartAPI\src\main\java\com\wanz\cart\view\UpdateCartRequest.java

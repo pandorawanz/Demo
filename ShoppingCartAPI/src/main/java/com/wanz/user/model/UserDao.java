@@ -13,4 +13,6 @@ public interface UserDao extends CrudRepository<User, Integer> {
     List<User> findAll();
 
     User save(User user);
+
+    User getByName(String name);
 }

@@ -8,9 +8,11 @@ com\wanz\order\view\CreateOrderRequest.class
 com\wanz\user\view\UpdateUserRequest.class
 com\wanz\user\model\UserDao.class
 com\wanz\cart\view\UpdateCartRequest.class
+com\wanz\Session\model\SessionManager.class
 com\wanz\product\view\validator\CreateProductRequestValidator.class
 com\wanz\order\view\UpdateOrderRequest.class
 com\wanz\product\view\CreateProductRequest.class
+com\wanz\Session\view\LoginRequest.class
 com\wanz\cart\view\CreateCartRequest.class
 com\wanz\cart\view\ListCartResponse.class
 com\wanz\cart\view\GetCartResponse.class
@@ -32,8 +34,11 @@ com\wanz\product\view\CreateProductResponse.class
 com\wanz\product\view\GetProductResponse.class
 com\wanz\product\controller\ProductController.class
 com\wanz\product\view\UpdateProductResponse.class
+com\wanz\Session\model\Session.class
 com\wanz\user\controller\UserController.class
 com\wanz\cart\controller\CartItemController.class
 com\wanz\order\view\GetOrderResponse.class
 com\wanz\product\model\Product.class
+com\wanz\user\view\UserView.class
+com\wanz\Session\controller\SessionController.class
 com\wanz\user\view\CreateUserResponse.class

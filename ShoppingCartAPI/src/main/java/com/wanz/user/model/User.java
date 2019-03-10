@@ -21,11 +21,12 @@ public class User {
 
     //购物车里的记录!
     //可以把多个产品放入到购物车里 --> 记录
+    /*
     @OneToMany(cascade = CascadeType.ALL,
             fetch = FetchType.EAGER,
             mappedBy = "user")
     private List<CartItem> cartItems;
-
+    */
     public User() {}
 
     public User(String name, String password) {
@@ -56,8 +57,9 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
+    /*
     public List<CartItem> getCartItems() {
         return cartItems;
     }
+    */
 }
