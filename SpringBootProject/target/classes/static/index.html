@@ -8,7 +8,21 @@
 我们的主页欢迎~
 <img src = "/wanz.jpg"/>
 <div id = "myList"></div>
-<script src="index.js">
+
+<!--<script src="index.js">-->
+<script>
+    function httpGet(theUrl) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+        xmlHttp.send( null );
+        return xmlHttp.responseText;
+    }
+
+    var username = httpGet('/whoami');
+
+    var node = document.createTextNode(username);
+    document.getElementById("myList").appendChild(node);
+
 </script>
 </body>
 </html>
